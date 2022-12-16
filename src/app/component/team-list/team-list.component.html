@@ -1,0 +1,13 @@
+<div [formGroup]="teamFormGroup">
+    <mat-form-field class="field" *ngIf="teams" appearance="outline">
+        <mat-label>Team</mat-label>
+        <mat-select formControlName="id" placeholder="Team">
+            <mat-option *ngFor="let team of teams" [value]="team.id">
+                {{team.name}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+    <button class="add-button" cmat-raised-button (click)="createTeamDialog()">
+        <mat-icon>add</mat-icon>
+    </button>
+</div>

@@ -1,0 +1,15 @@
+@import '../../../styles.scss';
+
+.add-button {
+    @extend .parent-button;
+    float: right;
+    min-width: 10%;
+}
+
+.add-button:active {
+    transform: translateY(4px);
+}
+
+.field {
+    width: 85%;
+}

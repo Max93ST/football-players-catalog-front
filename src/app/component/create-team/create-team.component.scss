@@ -1,0 +1,12 @@
+@import '../../../styles.scss';
+
+.close-button {
+    @extend .parent-button;
+    min-width: 60px;
+}
+
+.save-button {
+    @extend .parent-button;
+    margin-left: 30%;
+    min-width: 60px;
+}

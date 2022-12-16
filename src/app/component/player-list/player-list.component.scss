@@ -1,0 +1,41 @@
+@import '../../../styles.scss';
+
+table {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  max-height: 600px;
+  padding: 30px;
+}
+
+.add-button {
+  @extend .parent-button;
+  float: left;
+  min-width: 10%;
+  margin-bottom: 5px;
+}
+
+.add-button:active {
+  transform: translateY(4px);
+}
+
+.edit-button {
+  border: 0;
+  background: transparent;
+  touch-action: manipulation;
+  color: #3d50b6;
+  cursor: pointer;
+}
+
+.delete-button {
+  border: 0;
+  background: transparent;
+  touch-action: manipulation;
+  color: #ff0000;
+  cursor: pointer;
+}

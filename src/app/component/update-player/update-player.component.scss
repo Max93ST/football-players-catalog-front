@@ -1,0 +1,24 @@
+@import '../../../styles.scss';
+
+.container {
+    max-width: 400px;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+.clouse-button {
+    @extend .parent-button;
+    float: left;
+}
+
+.save-button {
+    @extend .parent-button;
+    float: right;
+}

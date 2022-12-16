@@ -1,0 +1,13 @@
+<div><h1 mat-dialog-title>Add new team</h1>
+<div mat-dialog-content>
+    <mat-form-field appearance="fill">
+        <mat-label>add new team</mat-label>
+        <input matInput [(ngModel)]="team.name">
+    </mat-form-field>
+</div>
+<div>
+    <mat-dialog-actions align="center">
+        <button class="close-button" mat-button mat-dialog-close>Close</button>
+        <button class="save-button" mat-button (click)="onClick()">Save</button>
+    </mat-dialog-actions>
+</div>

@@ -1,0 +1,37 @@
+@import '../../../styles.scss';
+
+mat-form-field {
+    width: 100%;
+}
+
+.container {
+    max-width: 500px;
+    margin: 30px auto;
+    overflow: auto;
+    min-height: 300px;
+    border: 2px solid steelblue;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.modal-footer {
+    width: 100%;
+}
+
+.cancel-button {
+    @extend .parent-button;
+    float: left;
+}
+
+.save-button {
+    @extend .parent-button;
+    float: right;
+}
+
+.cancel-button:active {
+    transform: translateY(4px);
+}
+
+.save-button:active {
+    transform: translateY(4px);
+}

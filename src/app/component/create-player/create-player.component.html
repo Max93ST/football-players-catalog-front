@@ -1,0 +1,51 @@
+<div class="container">
+    <form [formGroup]="playerFormGroup">
+        <mat-form-field appearance="outline">
+            <mat-label>Enter your First name</mat-label>
+            <input formControlName="firstName" matInput placeholder="first name">
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Enter your Second name</mat-label>
+            <input formControlName="secondName" matInput placeholder="second name">
+        </mat-form-field>
+
+        <section style="font-size: large;">
+            <label>Gender:</label>
+            <mat-radio-group formControlName="gender" aria-label="Select an option">
+                <mat-radio-button value="MALE">Male</mat-radio-button>
+                <mat-radio-button value="FEMALE">Female</mat-radio-button>
+            </mat-radio-group>
+        </section>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Choose a date</mat-label>
+            <input formControlName="birthday" matInput [matDatepicker]="picker">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        <div>
+            <app-team-list></app-team-list>
+        </div>
+
+        <mat-form-field *ngIf="countrys" appearance="outline">
+            <mat-label>Country</mat-label>
+            <mat-select formControlName="country" placeholder="Country">
+                <mat-option *ngFor="let country of countrys |keyvalue" [value]="country.key">
+                    {{country.value}}
+                </mat-option>
+            </mat-select>
+        </mat-form-field>
+    </form>
+
+    <div>
+        <button class='cancel-button' [routerLink]="['/players/list']">
+            Cancel
+        </button>
+
+        <button class='save-button' aria-label="Add new player" (click)="createPlayer()">
+            Save
+        </button>
+    </div>
+</div>
